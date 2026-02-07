@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf0u8ro4lujux"]
+
+[ext_resource type="Script" uid="uid://dqcka0ux24u7t" path="res://json_training/scripts/JsonTraining.cs" id="1_pkc2w"]
+
+[node name="JsonTraining" type="Node"]
+
+[node name="Test" type="Node" parent="."]
+script = ExtResource("1_pkc2w")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c5h74q7c16mm4"]
+
+[ext_resource type="Script" uid="uid://chd3xp00nqpow" path="res://interfaces_training/scripts/BoxController.cs" id="1_83rlb"]
+[ext_resource type="Texture2D" uid="uid://dhr40vwqu7f3" path="res://assets/graphics/square.png" id="1_logu4"]
+[ext_resource type="Texture2D" uid="uid://ckqsq7rb5wwql" path="res://assets/graphics/circle.png" id="2_x4noj"]
+[ext_resource type="Script" uid="uid://c7pvxypwmb1e1" path="res://interfaces_training/scripts/CircleController.cs" id="4_rkkrx"]
+
+[node name="InterfaceTraining" type="Node" unique_id=536563699]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2041281995]
+position = Vector2(800, 450)
+
+[node name="Box" type="Sprite2D" parent="." unique_id=1492451378]
+position = Vector2(447, 440)
+texture = ExtResource("1_logu4")
+script = ExtResource("1_83rlb")
+
+[node name="Circle" type="Sprite2D" parent="." unique_id=1116995346]
+position = Vector2(1173, 442)
+texture = ExtResource("2_x4noj")
+script = ExtResource("4_rkkrx")
