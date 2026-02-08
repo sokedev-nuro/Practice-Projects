@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://l6fpl7xkctnl"]
+
+[ext_resource type="Script" uid="uid://cpp6mlr48mtx0" path="res://generics/scripts/GameManager.cs" id="1_aujif"]
+[ext_resource type="Script" uid="uid://6ne3j67t2ikl" path="res://generics/scripts/Enemy.cs" id="2_tba87"]
+[ext_resource type="Texture2D" uid="uid://ckqsq7rb5wwql" path="res://assets/graphics/circle.png" id="3_s7eal"]
+
+[node name="NodeExtension" type="Node" unique_id=2057905888]
+
+[node name="GameManager" type="Node" parent="." unique_id=1477899971]
+script = ExtResource("1_aujif")
+
+[node name="Camera2D" type="Camera2D" parent="GameManager" unique_id=863655659]
+position = Vector2(800, 450)
+
+[node name="Enemy" type="Node2D" parent="." unique_id=608354873]
+position = Vector2(265, 168)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=1116817139]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")
+
+[node name="Enemy2" type="Node2D" parent="." unique_id=630573986]
+position = Vector2(759, 168)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy2" unique_id=1016694223]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")
+
+[node name="Enemy3" type="Node2D" parent="." unique_id=938223457]
+position = Vector2(1290, 168)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy3" unique_id=351872137]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")
+
+[node name="Enemy4" type="Node2D" parent="." unique_id=1856599585]
+position = Vector2(768, 452)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy4" unique_id=142415085]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")
+
+[node name="Enemy5" type="Node2D" parent="." unique_id=885531849]
+position = Vector2(1304, 452)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy5" unique_id=1861926794]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")
+
+[node name="Enemy6" type="Node2D" parent="." unique_id=1608091125]
+position = Vector2(266, 446)
+script = ExtResource("2_tba87")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy6" unique_id=716213482]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_s7eal")

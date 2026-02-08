@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ham337jc16ol"]
+
+[ext_resource type="Script" uid="uid://dfatn2w4ik0yp" path="res://generics/scripts/PersonManager.cs" id="1_myh3x"]
+
+[node name="Person" type="Node" unique_id=1992976898]
+
+[node name="Manager" type="Node" parent="." unique_id=1201902649]
+script = ExtResource("1_myh3x")

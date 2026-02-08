@@ -27,6 +27,21 @@ window/size/viewport_height=900
 
 project/assembly_name="Practice Project"
 
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://generics/": "pink",
+"res://generics/scenes/": "blue",
+"res://generics/scripts/": "purple",
+"res://interfaces_training/": "pink",
+"res://interfaces_training/scenes/": "blue",
+"res://interfaces_training/scripts/": "purple",
+"res://json_training/": "pink",
+"res://json_training/scenes/": "blue",
+"res://json_training/scripts/": "purple"
+}
+
 [rendering]
 
 renderer/rendering_method="mobile"
