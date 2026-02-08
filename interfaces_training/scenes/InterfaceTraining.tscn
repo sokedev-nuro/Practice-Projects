@@ -4,18 +4,39 @@
 [ext_resource type="Texture2D" uid="uid://dhr40vwqu7f3" path="res://assets/graphics/square.png" id="1_logu4"]
 [ext_resource type="Texture2D" uid="uid://ckqsq7rb5wwql" path="res://assets/graphics/circle.png" id="2_x4noj"]
 [ext_resource type="Script" uid="uid://c7pvxypwmb1e1" path="res://interfaces_training/scripts/CircleController.cs" id="4_rkkrx"]
+[ext_resource type="Script" uid="uid://dy343qy2dbpnj" path="res://interfaces_training/scripts/SelectionManager.cs" id="5_wggko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkkrx"]
+size = Vector2(257, 255)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rkkrx"]
+radius = 125.4472
 
 [node name="InterfaceTraining" type="Node" unique_id=536563699]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2041281995]
 position = Vector2(800, 450)
 
-[node name="Box" type="Sprite2D" parent="." unique_id=1492451378]
+[node name="SelectionManager" type="Node2D" parent="." unique_id=561955173]
+script = ExtResource("5_wggko")
+
+[node name="Box" type="Area2D" parent="." unique_id=651940145]
 position = Vector2(447, 440)
-texture = ExtResource("1_logu4")
 script = ExtResource("1_83rlb")
 
-[node name="Circle" type="Sprite2D" parent="." unique_id=1116995346]
-position = Vector2(1173, 442)
-texture = ExtResource("2_x4noj")
+[node name="Sprite2D" type="Sprite2D" parent="Box" unique_id=1468499146]
+texture = ExtResource("1_logu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box" unique_id=347589605]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_rkkrx")
+
+[node name="Circle" type="Area2D" parent="." unique_id=1615735393]
+position = Vector2(1145, 442)
 script = ExtResource("4_rkkrx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Circle" unique_id=1155349234]
+texture = ExtResource("2_x4noj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle" unique_id=1057878753]
+shape = SubResource("CircleShape2D_rkkrx")

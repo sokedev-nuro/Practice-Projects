@@ -2,11 +2,11 @@ using Godot;
 
 namespace InterfacesTraining
 {
-    public partial class CircleController : Sprite2D, ISelectable
+    public partial class CircleController : Area2D, ISelectable
     {
-        public void Select()
+        public void OnSelect()
         {
-            GD.Print("Circle Selected");
+            GD.Print($"[Box] Selected: {Name}, position: {GlobalPosition}");
         }
     }
 }

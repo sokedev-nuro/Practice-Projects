@@ -2,12 +2,11 @@ using Godot;
 
 namespace InterfacesTraining
 {
-    public partial class BoxController : Sprite2D, ISelectable
+    public partial class BoxController : Area2D, ISelectable
     {
-        public void Select()
+        public void OnSelect()
         {
-            GD.Print("Box Selected!");
+            GD.Print($"[Box] Selected: {Name}, position: {GlobalPosition}");
         }
     }
 }
-

@@ -1,7 +1,7 @@
 namespace InterfacesTraining
 {
-    interface ISelectable
+    public interface ISelectable
     {
-        void Select();
+        void OnSelect();
     }
 }
