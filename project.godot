@@ -31,6 +31,7 @@ project/assembly_name="Practice Project"
 [file_customization]
 
 folder_colors={
+"res://addons/": "teal",
 "res://assets/": "red",
 "res://generics/": "pink",
 "res://generics/scenes/": "blue",
@@ -40,8 +41,13 @@ folder_colors={
 "res://interfaces_training/scripts/": "purple",
 "res://json_training/": "pink",
 "res://json_training/scenes/": "blue",
-"res://json_training/scripts/": "purple"
+"res://json_training/scripts/": "purple",
+"res://spring_physics/": "pink"
 }
+
+[physics]
+
+2d/physics_engine="Rapier2D"
 
 [rendering]
 

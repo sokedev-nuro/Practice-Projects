@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://jcoie47v2cx1"]
+
+[ext_resource type="Script" uid="uid://dc1afuuou10jy" path="res://spring_physics/scripts/SpringVisualizer.cs" id="1_fkiaf"]
+
+[sub_resource type="Gradient" id="Gradient_fkiaf"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pe2oi"]
+gradient = SubResource("Gradient_fkiaf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkiaf"]
+size = Vector2(1607, 55)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkiaf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pe2oi"]
+
+[node name="SpringVisualization" type="Node" unique_id=343365949]
+
+[node name="Spring" type="Node2D" parent="." unique_id=637812748]
+visible = false
+position = Vector2(800, 450)
+script = ExtResource("1_fkiaf")
+_springStiffness = 3000.0
+_dampingCoefficient = 150.0
+_mass = 5.0
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=633682657]
+position = Vector2(0, 844)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform" unique_id=289759848]
+position = Vector2(803, 28)
+scale = Vector2(6.2578125, 52.5)
+texture = SubResource("GradientTexture1D_pe2oi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=863079328]
+position = Vector2(803.5, 28.5)
+shape = SubResource("RectangleShape2D_fkiaf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=170960641]
+position = Vector2(787, 408)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2095758512]
+shape = SubResource("CircleShape2D_fkiaf")
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=1588207468]
+position = Vector2(787, 408)
+node_a = NodePath("../StaticBody2D")
+node_b = NodePath("../RigidBody2D")
+length = 100.0
+stiffness = 64.0
+damping = 2.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=515939089]
+position = Vector2(787, 508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=899019476]
+shape = SubResource("CircleShape2D_pe2oi")
